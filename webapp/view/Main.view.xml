@@ -1,0 +1,15 @@
+<mvc:View xmlns:common="sap.viz.ui5.controls.common" controllerName="btptest.invoices.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Shell id="shell">
+    <App id="app">
+    <pages>
+    <Page id="page">
+    <content>
+    <Text id="_IDGenText1" text="Paco"></Text>
+    </content>
+    </Page>
+    </pages>
+    </App>    
+    </Shell>
+</mvc:View>
