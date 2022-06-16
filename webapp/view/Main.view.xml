@@ -13,14 +13,16 @@
                             <Label id="labelShipName" labelFor="ShipName" text="Ship Name" class="sapUiSmallMargin"/>
                             <Input id="shipName" width="200px" class="sapUiSmallMarginEnd"/>
                             <Label id="labelCountry" text="Country" class="sapUiSmallMargin"/>
-                            <Select id="slCountry" 
-                            selectedKey="{selectionScreen>/CountryKey}" 
-                            forceSelection="false" 
-                            items="{selectionScreen>/Countries}">
+                            <Select 
+                                id="slCountry" 
+                                selectedKey="{selectionScreen>/CountryKey}" 
+                                items="{selectionScreen>/Countries}">
                                 <items>
-                                    <core:Item id="_IDGenItem1" key="{selectionScreen>Key}" text="{selectionScreen>text}"/>
+                                    <core:Item id="_IDGenItem1" key="{selectionScreen>key}" text="{selectionScreen>text}"/>
                                 </items>
                             </Select>
+                            <Button id="btnFilter" text="{i18n>btnFilter}" icon="sap-icon://filter" press="onFilter" class="sapUiSmallMarginEnd"></Button>
+                            <Button id="btnClearFilter" text="{i18n>btnClearFilters}" icon="sap-icon://clear-filter" press="onClearFilter" class="sapUiSmallMarginEnd"></Button>
                         </Panel>
                     </content>
                 </Page>

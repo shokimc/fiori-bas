@@ -8,8 +8,17 @@ sap.ui.define([
         return Controller.extend("btptest.invoices.controller.Main", {
             onInit: function () {
                 const oJSONModel = new sap.ui.model.json.JSONModel();
+                const oView = this.getView();
                 oJSONModel.loadData("/model/selectionScreenMenu.json");
-                this.getView().setModel(oJSONModel, "selectionScreen");
+                oView.setModel(oJSONModel, "selectionScreen");
+            },
+            onFilter: function(oEvent){
+                
+            },
+
+            onClearFilter: function(){
+                const oModelSelScreen = this.getView().getModel("selectionScreen");
+                oModelSelScreen.setProperty("/CountryKey", "");
             }
         });
     });
