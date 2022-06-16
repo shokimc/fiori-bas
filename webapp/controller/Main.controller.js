@@ -9,7 +9,9 @@ sap.ui.define([
 
         return Controller.extend("btptest.invoices.controller.Main", {
             onInit: function () {
-
+                const oJSONModel = new sap.ui.model.json.JSONModel();
+                oJSONModel.loadData("./model/selectionScreenMenu.json");
+                this.getView().setModel(oJSONModel, "selectionScreen");
             }
         });
     });

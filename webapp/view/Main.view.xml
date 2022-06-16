@@ -1,6 +1,9 @@
-<mvc:View xmlns:common="sap.viz.ui5.controls.common" controllerName="btptest.invoices.controller.Main"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+<mvc:View xmlns:common="sap.viz.ui5.controls.common" 
+    controllerName="btptest.invoices.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
     <Shell id="shell">
         <App id="app">
             <pages>
@@ -10,6 +13,14 @@
                             <Label id="labelShipName" labelFor="ShipName" text="Ship Name" class="sapUiSmallMargin"/>
                             <Input id="shipName" width="200px" class="sapUiSmallMarginEnd"/>
                             <Label id="labelCountry" text="Country" class="sapUiSmallMargin"/>
+                            <Select id="slCountry" 
+                            selectedKey="{selectionScreen>/CountryKey}" 
+                            forceSelection="false" 
+                            items="{selectionScreen>/Countries}">
+                                <items>
+                                    <core:Item key="{selectionScreen>Key}" text="{selectionScreen>text}"/>
+                                </items>
+                            </Select>
                         </Panel>
                     </content>
                 </Page>
