@@ -2,14 +2,18 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Shell id="shell">
-    <App id="app">
-    <pages>
-    <Page id="page">
-    <content>
-    <Text id="_IDGenText1" text="Paco"></Text>
-    </content>
-    </Page>
-    </pages>
-    </App>    
+        <App id="app">
+            <pages>
+                <Page id="page">
+                    <content>
+                        <Panel id="_IDGenPanel1" headerText="{i18n>Selection}">
+                            <Label id="labelShipName" labelFor="ShipName" text="Ship Name" class="sapUiSmallMargin"/>
+                            <Input id="shipName" width="200px" class="sapUiSmallMarginEnd"/>
+                            <Label id="labelCountry" text="Country" class="sapUiSmallMargin"/>
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>    
     </Shell>
 </mvc:View>

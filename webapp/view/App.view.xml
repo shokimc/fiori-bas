@@ -4,11 +4,15 @@
     xmlns="sap.m">
     <App id="app">
         <pages>
-        <Page id="page" title="{i18n>title}">
-        <content>
-        <Text text="Hola mundo"></Text>
-        </content>
-    </Page>
-    </pages>
+            <Page id="page" title="{i18n>title}">
+                <content>
+                    <Panel headerText="Selection Screen">
+                        <Label id="labelShipName" labelFor="ShipName"text="Ship Name" class="sapUiSmallMargin"/>
+                        <Input id="shipName" width="200px" class="sapUiSmallMarginEnd"></Input>
+                        <Label id="labelCountry" text="Country" class="sapUiSmallMargin"></Label>
+                    </Panel>
+                </content>
+            </Page>
+        </pages>
     </App>
 </mvc:View>
