@@ -18,7 +18,7 @@
                             forceSelection="false" 
                             items="{selectionScreen>/Countries}">
                                 <items>
-                                    <core:Item key="{selectionScreen>Key}" text="{selectionScreen>text}"/>
+                                    <core:Item id="_IDGenItem1" key="{selectionScreen>Key}" text="{selectionScreen>text}"/>
                                 </items>
                             </Select>
                         </Panel>
