@@ -15,9 +15,12 @@ server:
             - /resources
             - /test-resources
           url: https://ui5.sap.com
+        #backend:
+        #  - path: /sap
+        #    url: http://localhost
         backend:
-          - path: /sap
-            url: http://localhost
+          - path: /V2
+            url: https://northwind.dest
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:

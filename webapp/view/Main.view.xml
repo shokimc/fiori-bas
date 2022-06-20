@@ -11,7 +11,7 @@
                     <content>
                         <Panel id="_IDGenPanel1" headerText="{i18n>Selection}">
                             <Label id="labelShipName" labelFor="ShipName" text="Ship Name" class="sapUiSmallMargin"/>
-                            <Input id="shipName" width="200px" class="sapUiSmallMarginEnd"/>
+                            <Input id="shipName" value="{selectionScreen>/ShipName}" width="200px" class="sapUiSmallMarginEnd"/>
                             <Label id="labelCountry" text="Country" class="sapUiSmallMargin"/>
                             <Select 
                                 id="slCountry" 
@@ -23,6 +23,23 @@
                             </Select>
                             <Button id="btnFilter" text="{i18n>btnFilter}" icon="sap-icon://filter" press="onFilter" class="sapUiSmallMarginEnd"></Button>
                             <Button id="btnClearFilter" text="{i18n>btnClearFilters}" icon="sap-icon://clear-filter" press="onClearFilter" class="sapUiSmallMarginEnd"></Button>
+                        </Panel>
+                        <Panel id="_IDGenPanel2">
+                        <List id="invoicesList"
+                        headerText="{i18n>invoiceHeaderList}"
+                        class="sapUiResponsiveMargin"
+                        width="auto"
+                        items="{/Invoices}">
+                        <items>
+                            <ObjectListItem id="_IDGenObjectListItem1" 
+                                            title="{ShipName} - {Country}"
+                                            number="{ parts: [ {path:'ExtendedPrice'}, {path:'selectionScreen>/Currency'}],
+                                            type:'sap.ui.model.type.Currency', formatOptions:{ showMeasure: false} }"
+                                            numberUnit="{selectionScreen>/Currency}"
+                                            numberState="{= ${ExtendedPrice} > 100 ? 'Success' : 'Warning'}">
+                            </ObjectListItem>
+                        </items>
+                        </List>
                         </Panel>
                     </content>
                 </Page>

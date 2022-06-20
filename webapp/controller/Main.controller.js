@@ -14,10 +14,14 @@ sap.ui.define([
             },
             onFilter: function(oEvent){
                 
+                
+                
+
             },
 
             onClearFilter: function(){
                 const oModelSelScreen = this.getView().getModel("selectionScreen");
+                oModelSelScreen.setProperty("/ShipName", "");
                 oModelSelScreen.setProperty("/CountryKey", "");
             }
         });
